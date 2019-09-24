@@ -1,6 +1,6 @@
 <template>    
-<div id="divFrom">
-        <form>
+<div id= "background">
+        <form id="divFrom">
             <center>
                 <h1>Register</h1>
             </center>
@@ -37,11 +37,14 @@
 </template>
 <style scoped>
 #background {
-  background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  width: 100%;
-}
+    background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 10%;
+        
+    }
 #divFrom {
     width: 30%;
     position: relative;

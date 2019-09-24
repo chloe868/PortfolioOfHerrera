@@ -8,6 +8,6 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 new Vue({
   render: h => h(App),
-    router: router,
-    template: '<router-view></router-view>'
+  router: router,
+  template: '<router-view></router-view>'
 }).$mount('#app')

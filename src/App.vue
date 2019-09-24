@@ -1,22 +1,22 @@
 <template>
   <div id="app">
   <Header></Header>
-  <Login></Login>
-  <Register></Register>
+  <AppBody></AppBody>
   </div>
 </template>
 
 <script>
-import Header from './components/frame/Header.vue'
-import Login from './components/Login.vue'
-//import Register from './components/Register.vue'
-//import LoginPage from './components/LoginPage.vue'
+import Header from 'components/frame/Header.vue'
+import AppBody from 'components/frame/Body.vue'
+
+// import Login from './modules/Login.vue'
+// import Register from './modules/Register.vue'
 
 export default {
   name: 'app',
   components: {
     Header,
-    Login
+    AppBody
   }
 }
 </script>

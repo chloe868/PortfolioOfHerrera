@@ -31,8 +31,10 @@
     #background {
         background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
         background-repeat: no-repeat;
+        background-size: cover;
         background-size: 100%;
-        padding-top: 20%;
+        padding-top: 15%;
+        padding-bottom: 10%;
         
     }
     #divLogin {

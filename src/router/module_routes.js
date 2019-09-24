@@ -11,9 +11,15 @@ let routes = [
     {
         path: '/',
         name: 'home',
-        component: resolve => require(['../modules/basic/Register.vue'], resolve),
+        component: resolve => require(['modules/Login.vue'], resolve),
         beforeEnter : beforeEnter
     }
+    // {
+    //     path: '/reg',
+    //     name: 'registered',
+    //     component: resolve => require(['modules/Register.vue'], resolve),
+    //     beforeEnter : beforeEnter
+    // }
 ]
 routes = routes.concat(devRoutes)
 export default{

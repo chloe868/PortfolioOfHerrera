@@ -4,5 +4,5 @@ import ModuleRoutes from './module_routes'
 //global.$ = global.jQuery
 Vue.use(Router)
 export default new Router({
-    routes:ModuleRoutes.routes
+    routes: ModuleRoutes.routes
 })
