@@ -18,7 +18,7 @@
                             <input type="password" class="form-control" id="loginPassword" placeholder="Password">
                         </div>
                     </div>
-                    <button id="btnLogin" class="btn btn-success btn-lg btn-block">
+                    <button id="btnLogin" class="btn btn-success btn-lg btn-block" v-onclick = "register()">
                         <h4>Login</h4>
                     </button>
                 </div>
@@ -33,9 +33,8 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-size: 100%;
-        padding-top: 15%;
-        padding-bottom: 10%;
-        
+        padding-top: 10%;
+        padding-bottom: 15%;     
     }
     #divLogin {
         width: 30%;
@@ -44,7 +43,25 @@
         background-color: rgb(200, 207, 204);
         border-radius: 5%;
         padding: 2%;
-        
     }
-
 </style>
+<script>
+export default {
+name: 'home',
+    data() {
+        return {
+            firstname:"",
+            lastname:"",
+            password:"",
+            email:""
+        }
+    },
+    methods: {
+        register() {
+            window.location.href = '/#/Login';
+        }
+    }
+};
+</script>
+
+

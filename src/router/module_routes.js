@@ -13,11 +13,17 @@ let routes = [
         name: 'home',
         component: resolve => require(['modules/Login.vue'], resolve),
         beforeEnter : beforeEnter
+    },
+    {
+        path: '/reg',
+        name: 'registered',
+        component: resolve => require(['modules/Register.vue'], resolve),
+        beforeEnter : beforeEnter
     }
     // {
-    //     path: '/reg',
-    //     name: 'registered',
-    //     component: resolve => require(['modules/Register.vue'], resolve),
+    //     path: 'dash',
+    //     name: 'dashboard',
+    //     component: resolve => require(['modules/Dashboard.vue'], resolve),
     //     beforeEnter : beforeEnter
     // }
 ]

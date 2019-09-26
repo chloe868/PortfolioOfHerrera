@@ -20,18 +20,12 @@
                     <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="inputPassword4">Password</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
                     <div id="feedback" class="feedColor"></div>
                 </div>
             </div>
-            <div class="form-group">
-                <label for="inputAddress">Address</label>
-                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-            </div>
-
-            <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
-
+            <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block" v-onclick = "login()">Register</button>
         </form>
     </div>
 </template>
@@ -42,7 +36,7 @@
     background-size: cover;
     background-size: 100%;
     padding-top: 0.5%;
-    padding-bottom: 10%;
+    padding-bottom: 15%;
         
     }
 #divFrom {
@@ -54,6 +48,14 @@
     border-radius: 5%;
     padding: 2%;
 }
-
-
 </style>
+<script>
+export default {
+name: 'registered',
+    methods: {
+        login() {
+            window.location.href = '/#/Login';
+        }
+    }
+};
+</script>
