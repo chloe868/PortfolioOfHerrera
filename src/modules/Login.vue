@@ -1,65 +1,74 @@
 <template>
-    <div id = "background">
-        <div>
-            <form id="divLogin">
-                <div>
-                    <center>
-                        <h1>Login</h1>
-                    </center>
-                    <div class="form-group row">
-                        <label for="loginEmail" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                            <input type="email" class="form-control" id="loginEmail" placeholder="Email">
+  <div id="background">
+    <div id="divLogin">
+          <div>
+          <center>
+            <h1>Login</h1>
+          </center>
+            <div class="card-body">
+                <form @submit="onsubmit">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
+                        <input type="text" class="form-control" placeholder="username" name="username" v-model="input.username" required>
+
                     </div>
-                    <div class="form-group row">
-                        <label for="loginPassword" class="col-sm-2 col-form-label">Password</label>
-                        <div class="col-sm-10"><br><br>
-                            <input type="password" class="form-control" id="loginPassword" placeholder="Password">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
+                        <input type="password" class="form-control" placeholder="password" name="password" v-model="input.password" required>
                     </div>
-                    <button id="btnLogin" class="btn btn-success btn-lg btn-block" v-onclick = "register()">
-                        <h4>Login</h4>
-                    </button>
-                </div>
-            </form>
-        </div>
+                    <div class="form-group">
+                     <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                    </div>
+                </form>
+            </div>
+          </div>
     </div>
+  </div>
 </template>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    #background {
-        background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-size: 100%;
-        padding-top: 10%;
-        padding-bottom: 15%;     
-    }
-    #divLogin {
-        width: 30%;
-        position: relative;
-        left: 35%;
-        background-color: rgb(200, 207, 204);
-        border-radius: 5%;
-        padding: 2%;
-    }
+#background {
+  background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  padding-top: 10%;
+  padding-bottom: 15%;
+}
+#divLogin {
+  width: 30%;
+  position: relative;
+  left: 35%;
+  background-color: rgb(200, 207, 204);
+  border-radius: 5%;
+  padding: 2%;
+}
 </style>
 <script>
+import AUTH from 'services/auth'
 export default {
-name: 'home',
+    name: 'Login',
+    auth: AUTH,   
     data() {
         return {
-            firstname:"",
-            lastname:"",
-            password:"",
-            email:""
+            input: {
+                username: "",
+                password: ""
+            }
         }
     },
     methods: {
-        register() {
-            window.location.href = '/#/Login';
-        }
+        Signup() {
+            window.location.href = '/Register';
+        },
+        onsubmit(e) {
+            e.preventDefault();
+            AUTH.login(this.input.username, this.input.password)
+        },
     }
 };
 </script>

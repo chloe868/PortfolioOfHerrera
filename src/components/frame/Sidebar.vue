@@ -9,24 +9,28 @@
                 menu: [
                     {
                         header: true,
-                        title: 'Main Navigation',
+                        title: 'Dashboards',
                         hiddenOnCollapse: true
                     },
                     {
-                        href: '/',
+                        href: '/dashboard',
                         title: 'Dashboard',
-                        icon: 'fa fa-user'
+                        icon: 'fas fa-tachometer-alt'
                     },
                     {
-                        href: '/charts',
-                        title: 'Charts',
-                        icon: 'fa fa-chart-area',
-                        child: [
-                            {
-                                href: '/charts/sublink',
-                                title: 'Sub Link'
-                            }
-                        ]
+                        href: '/Profile',
+                        title: 'Profile',
+                        icon: 'fas fa-user'
+                    },
+                    {
+                        href: '/add',
+                        title: 'Add Course and Subjects',
+                        icon: 'fas fa-plus-square'
+                    },
+                    {
+                        href: '/Login',
+                        title: 'Logout',
+                        icon: 'fas fa-power-off'
                     }
                 ]
             }

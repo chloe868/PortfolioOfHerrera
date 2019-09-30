@@ -14,15 +14,24 @@ export default {
         meta: {
             tokenrequired: false
         }
+    },
+    {
+        path: '/dashboard',
+        name: 'Dashboard',
+        component: resolve => require(['components/frame/Dashboard.vue'], resolve),
+        meta: {
+            tokenrequired: true
+        }
+    },
+    {
+        path: '/Profile',
+        name: 'profile',
+        component: resolve => require(['components/frame/Profile.vue'], resolve),
+        meta: {
+            tokenrequired: true
+        }
     }
-    // {
-    //     path: 'Dashboard',
-    //     name: 'dashboard',
-    //     component: resolve => require(['modules/Dashboard.vue'], resolve),
-    //     meta: {
-    //         tokenrequired: true
-    //     }
-    ]
+]
 }
 
 

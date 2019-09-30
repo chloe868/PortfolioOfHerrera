@@ -1,61 +1,100 @@
-<template>    
-<div id= "background">
-        <form id="divFrom">
-            <center>
-                <h1>Register</h1>
-            </center>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputfname">Firstname</label>
-                    <input type="text" class="form-control" id="inputfname" placeholder="Firstname">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputlname">Lastname</label>
-                    <input type="text" class="form-control" id="inputlname" placeholder="Lastname">
-                </div>
+<template>
+  <div id="background">
+    <div id="divFrom">
+      <center>
+        <h1>Register</h1>
+      </center>
+        <div class="card-body">
+          <form @submit="onsubmit">
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <input type="text" class="form-control" placeholder="username" name="username"
+                v-model="input.username"
+                required
+              />
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputEmail4">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                </div>
-                <div class="form-group col-md-6">
-                    <label for="inputPassword">Password</label>
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                    <div id="feedback" class="feedColor"></div>
-                </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-key"></i>
+                </span>
+              </div>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                placeholder="password"
+                v-model="input.password"
+                required
+              />
             </div>
-            <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block" v-onclick = "login()">Register</button>
-        </form>
-    </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-key"></i>
+                </span>
+              </div>
+              <input
+                type="password"
+                class="form-control"
+                name="confirmpassword"
+                placeholder="confirm password"
+                v-model="input.confirmpassword"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  </div>
 </template>
 <style scoped>
 #background {
-    background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100%;
-    padding-top: 0.5%;
-    padding-bottom: 15%;
-        
-    }
+  background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  padding-top: 0.5%;
+  padding-bottom: 15%;
+}
 #divFrom {
-    width: 30%;
-    position: relative;
-    left: 35%;
-    margin-top: 10%;
-    background-color: rgb(200, 207, 204);
-    border-radius: 5%;
-    padding: 2%;
+  width: 30%;
+  position: relative;
+  left: 35%;
+  margin-top: 10%;
+  background-color: rgb(200, 207, 204);
+  border-radius: 5%;
+  padding: 2%;
 }
 </style>
 <script>
+import AUTH from 'services/auth'
 export default {
-name: 'registered',
+    name: 'register',
+    auth:AUTH,
+    data() {
+        return {
+            input: {
+                username: "",
+                password: "",
+                confirmpassword: ""
+            }
+        }
+    },
     methods: {
-        login() {
-            window.location.href = '/#/Login';
+        onsubmit(e) {
+            e.preventDefault();
+            sessionStorage.setItem("username", this.input.username)
+            sessionStorage.setItem("password", this.input.password)
+            sessionStorage.setItem("confirmpassword",this.input.confirmpassword)
+            AUTH.register(this.input.username, this.input.password,this.input.confirmpassword)
         }
     }
-};
+}
 </script>
+

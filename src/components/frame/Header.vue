@@ -1,7 +1,7 @@
 <template>
 <div>
  <b-navbar toggleable="lg" type="dark" variant="info">
-    <b-navbar-brand href="#"><b>KAT-ON</b></b-navbar-brand>
+    <b-navbar-brand href="#" class="title"><b>KAT-ON</b></b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -17,15 +17,6 @@
           <b-form-input size="sm" class="form-control mr-sm-2" placeholder="Search"></b-form-input>
           <b-button size="sm" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</b-button>
         </b-nav-form>
-
-    <b-nav-item-dropdown right>
-          <!-- Using 'button-content' slot -->
-          <template v-slot:button-content>
-            <em>User</em>
-          </template>
-          <b-dropdown-item href="#">Profile</b-dropdown-item>
-          <b-dropdown-item href="#">Logout</b-dropdown-item>
-        </b-nav-item-dropdown>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -36,7 +27,7 @@
 @import"assets/colors.scss";
 $titleColor:red;
 .title{
-  color: $danger !important;
+  color: $secondary !important;
 }
 </style>
 <script>

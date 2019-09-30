@@ -15,15 +15,15 @@ let routes = [
         beforeEnter : beforeEnter
     },
     {
-        path: '/reg',
+        path: '/Register',
         name: 'registered',
         component: resolve => require(['modules/Register.vue'], resolve),
         beforeEnter : beforeEnter
     }
     // {
-    //     path: 'dash',
-    //     name: 'dashboard',
-    //     component: resolve => require(['modules/Dashboard.vue'], resolve),
+    //     path: '/Dashboard',
+    //     name: 'dashboards',
+    //     component: resolve => require(['components/frame/Dashboard.vue'], resolve),
     //     beforeEnter : beforeEnter
     // }
 ]
