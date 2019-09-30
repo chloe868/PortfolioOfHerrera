@@ -1,87 +1,57 @@
 <template>
-  <div>
-    <center>
-    <form>
-      <b-form @submit="onSubmit" @reset="onReset" v-if="show">
-        <b-form-group
-          id="input-group-1"
-          label="Email address:"
-          label-for="input-1"
-          description="We'll never share your email with anyone else."
-        >
-          <b-form-input
-            id="input-1"
-            v-model="form.email"
-            type="email"
-            required
-            placeholder="Enter email"
-          ></b-form-input>
-        </b-form-group>
-
-        <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
-          <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name"></b-form-input>
-        </b-form-group>
-
-        <b-form-group id="input-group-3" label="Food:" label-for="input-3">
-          <b-form-select id="input-3" v-model="form.food" :options="foods" required></b-form-select>
-        </b-form-group>
-
-        <b-form-group id="input-group-4">
-          <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
-            <b-form-checkbox value="me">Check me out</b-form-checkbox>
-            <b-form-checkbox value="that">Check that out</b-form-checkbox>
-          </b-form-checkbox-group>
-        </b-form-group>
-
-        <b-button type="submit" variant="primary">Submit</b-button>
-        <b-button type="reset" variant="danger">Reset</b-button>
-      </b-form>
-      <b-card class="mt-3" header="Form Data Result">
-        <pre class="m-0">{{ form }}</pre>
+  <div id="background">
+    <div id="card">
+      <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+        <b-row no-gutters>
+          <b-col md="6">
+            <b-card-img :src="require('assets/user.png')" class="rounded-0"></b-card-img>
+          </b-col>
+          <b-col md="6">
+            <b-card-body title="Personal Info">
+                <hr>
+              <b-card-text>
+                <h6>firstname: {{firstname}}</h6>
+                <h6>lastname: {{lastname}}</h6>
+                <h6>username: {{username}}</h6>
+                <h6 type="password">Password: {{password}}</h6>
+              </b-card-text>
+              <button @click = "update()">Update</button>
+            </b-card-body>
+          </b-col>
+        </b-row>
       </b-card>
-    </form>
-    </center>
+    </div>
   </div>
 </template>
-
+<style>
+#background {
+  background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  padding-top: 0.5%;
+  padding-bottom: 15%;
+}
+#card {
+  margin-top: 50px;
+  margin-left: 380px;
+}
+</style>
 <script>
-import { Script } from "vm";
+import AUTH from 'services/auth'
 export default {
+  name: "Profile",
   data() {
     return {
-      form: {
-        email: "",
-        name: "",
-        food: null,
-        checked: []
-      },
-      foods: [
-        { text: "Select One", value: null },
-        "Carrots",
-        "Beans",
-        "Tomatoes",
-        "Corn"
-      ],
-      show: true
+      firstname: sessionStorage.getItem("firstname"),
+      lastname: sessionStorage.getItem("lastname"),
+      username: sessionStorage.getItem("username"),
+      password: sessionStorage.getItem("password")
     };
   },
-  methods: {
-    onSubmit(evt) {
-      evt.preventDefault();
-      alert(JSON.stringify(this.form));
-    },
-    onReset(evt) {
-      evt.preventDefault();
-      // Reset our form values
-      this.form.email = "";
-      this.form.name = "";
-      this.form.food = null;
-      this.form.checked = [];
-      // Trick to reset/clear native browser form validation state
-      this.show = false;
-      this.$nextTick(() => {
-        this.show = true;
-      });
+  methods:{
+    update: function(){
+      AUTH.update(this.firstname,this.lastname,this.username, this.password)
     }
   }
 };

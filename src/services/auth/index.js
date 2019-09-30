@@ -27,6 +27,13 @@ export default {
     logout() {
         this.user = null
         Router.push('/Login')
+    },
+    save(){
+        this.user = null
+        Router.push('/Profile')
+    },
+    update(){
+        this.user = null
+        Router.push('/UpdateProf')
     }
-
 }

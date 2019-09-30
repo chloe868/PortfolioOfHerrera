@@ -20,7 +20,7 @@
                     {
                         href: '/Profile',
                         title: 'Profile',
-                        icon: 'fas fa-user'
+                        icon: 'fas fa-user',
                     },
                     {
                         href: '/add',

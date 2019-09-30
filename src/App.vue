@@ -5,7 +5,7 @@
     ></Header>
     <AppBody></AppBody>
       <Sidebar
-        v-show="$route.path === '/dashboard' || $route.path === '/Profile'|| $route.path === '/add'  ? true: false"
+        v-show="$route.path === '/dashboard' || $route.path === '/Profile' || $route.path === '/add'  ? true: false"
       >
       </Sidebar>
       <Dashboard></Dashboard>

@@ -30,6 +30,14 @@ export default {
         meta: {
             tokenrequired: true
         }
+    },
+    {
+        path: '/UpdateProf',
+        name: 'Updateprofile',
+        component: resolve => require(['components/frame/UpdateProf.vue'], resolve),
+        meta: {
+            tokenrequired: true
+        }
     }
 ]
 }

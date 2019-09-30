@@ -10,40 +10,31 @@
               <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>
               </div>
-              <input type="text" class="form-control" placeholder="username" name="username"
-                v-model="input.username"
-                required
-              />
+              <input type="text" class="form-control" placeholder="firstname" name="firstname" v-model="input.firstname" required/>
             </div>
             <div class="input-group form-group">
               <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="fas fa-key"></i>
-                </span>
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
               </div>
-              <input
-                type="password"
-                class="form-control"
-                name="password"
-                placeholder="password"
-                v-model="input.password"
-                required
-              />
+              <input type="text" class="form-control" placeholder="lastname" name="lastname" v-model="input.lastname" required/>
             </div>
             <div class="input-group form-group">
               <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="fas fa-key"></i>
-                </span>
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
               </div>
-              <input
-                type="password"
-                class="form-control"
-                name="confirmpassword"
-                placeholder="confirm password"
-                v-model="input.confirmpassword"
-                required
-              />
+              <input type="text" class="form-control" placeholder="username" name="username" v-model="input.username" required/>
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" class="form-control" name="password" placeholder="password" v-model="input.password" required/>
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" class="form-control" name="confirmpassword" placeholder="confirm password" v-model="input.confirmpassword" required/>
             </div>
             <div class="form-group">
               <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
@@ -80,6 +71,8 @@ export default {
     data() {
         return {
             input: {
+                firstname: "",
+                lastname: "",
                 username: "",
                 password: "",
                 confirmpassword: ""
@@ -89,6 +82,8 @@ export default {
     methods: {
         onsubmit(e) {
             e.preventDefault();
+            sessionStorage.setItem("firstname", this.input.firstname)
+            sessionStorage.setItem("lastname", this.input.lastname)
             sessionStorage.setItem("username", this.input.username)
             sessionStorage.setItem("password", this.input.password)
             sessionStorage.setItem("confirmpassword",this.input.confirmpassword)
