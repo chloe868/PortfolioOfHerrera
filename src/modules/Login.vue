@@ -11,17 +11,17 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="username" name="username" v-model="input.username" required>
+                        <input type="text" class="form-control" placeholder="username" name="username" v-model="input.username">
 
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="password" name="password" v-model="input.password" required>
+                        <input type="password" class="form-control" placeholder="password" name="password" v-model="input.password">
                     </div>
                     <div class="form-group">
-                     <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                     <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block" @click='logins()'>Submit</button>
                     </div>
                 </form>
             </div>
@@ -50,6 +50,7 @@
 </style>
 <script>
 import AUTH from 'services/auth'
+import jquery from 'jquery'
 export default {
     name: 'Login',
     auth: AUTH,   
@@ -69,7 +70,19 @@ export default {
             e.preventDefault();
             AUTH.login(this.input.username, this.input.password)
         },
-    }
+        logins() {            
+            let link= 'http://localhost:3000/user'
+                jquery.ajax({
+                    url: link,
+                    method: 'POST',
+                    headers: {
+                        'Access-Control-Allow-Origin': '*'
+                    }
+                }).then(response => {
+                    alert(response.username)
+                })
+        }
+    }   
 };
 </script>
 

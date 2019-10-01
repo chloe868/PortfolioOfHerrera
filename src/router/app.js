@@ -38,6 +38,14 @@ export default {
         meta: {
             tokenrequired: true
         }
+    },
+    {
+        path: '/add',
+        name: 'AddSubjects&Course',
+        component: resolve => require(['components/frame/addSubjects.vue'], resolve),
+        meta: {
+            tokenrequired: true
+        }
     }
 ]
 }

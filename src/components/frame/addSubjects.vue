@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <div class="jumbotron">
-      <h1>Subjects</h1>
-    </div>
+  <div id="background">
+    <div id="add">
     <center>
-      <b-card text-align id="card" img-top tag="article" style="max-width: 30rem;" class="mb-2">
+      <h1>Add Subjects & Course</h1>
+    </center>
+        <hr>
+    <center>
+      <b-card text-align  img-top tag="article" style="max-width: 30rem;" class="mb-2">
         <b-form-group label-size="lg" label-for="input-lg">
           <label id="Subject">Subject:</label>
           <b-form-input v-model="infos.subject" id="subject" size="lg"></b-form-input>
@@ -19,7 +21,7 @@
           <label id="room">Room:</label>
           <b-form-input v-model="infos.room" id="room" size="lg"></b-form-input>
           <br>
-          <b-button variant="primary" @click="addItem"
+          <b-button variant="primary" class="btn btn-primary btn-lg btn-block" @click="addItem"
            >Add Subject</b-button>
         </b-form-group>
       </b-card>
@@ -41,23 +43,36 @@
               <td>{{ item.time }}</td>
               <td>{{ item.day }}</td>
               <td>{{ item.room }}</td>
-
             </tr>
           </tbody>
         </table>
       </b-card>
-    </center>
+      </center>
+    </div>
   </div>
 </template>
 
 
 <style>
-#card {
-  margin-top: 20px;
+#background {
+  background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
-.jumbotron {
-  padding: 20px;
-  text-align: center;
+#add{
+  width: 40%;
+  position: relative;
+  left: 35%;
+  background-color: rgb(200, 207, 204);
+  border-radius: 5%;
+  padding: 2%;
+}
+#image {
+  width: 150px;
+  height: 150px;
 }
 </style>
 

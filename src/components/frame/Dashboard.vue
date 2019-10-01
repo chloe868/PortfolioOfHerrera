@@ -1,35 +1,44 @@
 <template>
-  <div>
-    <div class="jumbotron">
+  <div id="background">
+    <div id="dash">
+    <center>
       <h1>Dashboard</h1>
-    </div>
-    <div id="card">
-      <b-card no-body class="overflow-hidden" style="max-width: 540px;">
-        <center>
-          <b-card-img id="image" :src="require('assets/user.png')" class="rounded-0"></b-card-img>
-          <b-row no-gutters>
-            <b-card-body>
-              <h1>HI {{firstname}}</h1>
-              <h3>Welcome!!!</h3>
-            </b-card-body>
-          </b-row>
+      <hr>
+      </center>
+      <div id="card">
+          <center>
+            <b-card-img id="image" :src="require('assets/user.png')" class="rounded-0"></b-card-img>
+                <h1>Hi {{firstname}}!</h1>
+                <h3>Welcome!!!</h3>
         </center>
-      </b-card>
+      </div>
     </div>
   </div>
 </template>
 <style scoped>
 #card {
   margin-top: 30px;
-  margin-left: 400px;
-}
-.jumbotron{
-    padding:20px;
-    text-align: center;
+  margin-left: 20px;
 }
 #image {
   width: 250px;
   height: 220px;
+}
+#background {
+  background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+#dash {
+  width: 30%;
+  position: relative;
+  left: 35%;
+  background-color: rgb(200, 207, 204);
+  border-radius: 5%;
+  padding: 2%;
 }
 </style>
 
