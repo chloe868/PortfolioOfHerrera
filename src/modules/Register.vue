@@ -4,7 +4,6 @@
       <center>
         <h1>Register</h1>
       </center>
-        <div class="card-body">
           <form @submit="onsubmit">
             <div class="input-group form-group">
               <div class="input-group-prepend">
@@ -20,7 +19,7 @@
             </div>
             <div class="input-group form-group">
               <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-user"></i></span>
+                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
               </div>
               <input type="text" class="form-control" placeholder="username" name="username" v-model="input.username" required/>
             </div>
@@ -30,17 +29,10 @@
               </div>
               <input type="password" class="form-control" name="password" placeholder="password" v-model="input.password" required/>
             </div>
-            <div class="input-group form-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-key"></i></span>
-              </div>
-              <input type="password" class="form-control" name="confirmpassword" placeholder="confirm password" v-model="input.confirmpassword" required/>
-            </div>
             <div class="form-group">
               <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
             </div>
           </form>
-        </div>
       </div>
   </div>
 </template>
@@ -74,8 +66,7 @@ export default {
                 firstname: "",
                 lastname: "",
                 username: "",
-                password: "",
-                confirmpassword: ""
+                password: ""
             }
         }
     },
@@ -86,8 +77,7 @@ export default {
             sessionStorage.setItem("lastname", this.input.lastname)
             sessionStorage.setItem("username", this.input.username)
             sessionStorage.setItem("password", this.input.password)
-            sessionStorage.setItem("confirmpassword",this.input.confirmpassword)
-            AUTH.register(this.input.username, this.input.password,this.input.confirmpassword)
+            AUTH.register(this.input.username, this.input.password)
         }
     }
 }

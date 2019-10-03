@@ -1,37 +1,37 @@
 <template>
   <div id="background">
     <div id="Updateprof" class="col-sm-4">
-    <center>
-      <h1>Update Profile</h1>
-    </center>
-      <hr>
-      <div class="container">
-        <center>
-        <b-card-img :src="require('assets/user.png')" id="image" class="rounded-0"></b-card-img>
-        </center>
-          <hr>
-            <div class="form-group">
-              <label for="firstname">Firstname</label>
-              <input type="text" class="form-control" id="firstname" v-model="firstname" />
-            </div>
-            <div class="form-group">
-              <label for="lastname">Lastname</label>
-              <input type="text" class="form-control" id="lastname" v-model="lastname" />
-            </div>
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" class="form-control" id="username" v-model="username" />
-            </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" class="form-control" id="passw" v-model="password" />
-            </div>
+      <center>
+        <h1>Update Profile</h1>
+      </center>
+        <hr>
+        <div class="container">
           <center>
-            <button type="button" class="btn btn-primary btn-lg btn-block" id="btnLogin" @click="save">Save changes</button>
+          <b-card-img :src="require('assets/user.png')" id="image" class="rounded-0"></b-card-img>
           </center>
-          </div>
-      </div>
+            <hr>
+            <div class="input-group form-group">
+            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></div>
+              <input type="text" class="form-control" placeholder="Firstname" name="firstname" v-model="firstname" required/>
+             </div>
+            <div class="input-group form-group">
+            <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-user"></i></span></div>
+                <input type="text" class="form-control" placeholder="Lastname" name="lastname" v-model="lastname" required/>
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-envelope"></i></span></div>
+              <input type="text" class="form-control" placeholder="Username" name="username" v-model="username" required/>
+            </div>
+            <div class="input-group form-group">
+              <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-key"></i></span></div>
+              <input type="text" class="form-control" placeholder="NewPassword" name="password" v-model="password" required/>
+            </div>
+            <center>
+              <button type="button" class="btn btn-primary btn-lg btn-block" id="btnLogin" @click="save">Save changes</button>
+            </center>
+        </div>
     </div>
+  </div>
 </template>
 <script>
 import AUTH from 'services/auth'
