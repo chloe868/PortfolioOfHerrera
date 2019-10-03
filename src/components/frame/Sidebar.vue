@@ -1,7 +1,14 @@
 <template>
-  <sidebar-menu :menu="menu" />
+    <div>
+        <sidebar-menu id="sidebarmenu" :menu="menu" />
+    </div>
 </template>
- 
+<style scoped>
+    #sidebarmenu{
+        height: 93%;
+        margin-top:3.5%;
+    }
+</style>
 <script>
     export default {
         data() {

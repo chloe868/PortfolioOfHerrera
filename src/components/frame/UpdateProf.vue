@@ -64,7 +64,7 @@ export default {
   background-size: cover;
   background-size: 100%;
   padding-top: .3%;
-  padding-bottom: 5%;
+  padding-bottom: 6.5%;
 }
 #Updateprof {
   width: 30%;

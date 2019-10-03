@@ -26,6 +26,7 @@
         <input type="text" class="form-control" placeholder="Room" name="room" v-model="infos.room" required/>
       </div>
         <b-button variant="primary" class="btn btn-primary btn-lg btn-block" @click="addOn">Add Subject</b-button>
+        <b-button variant="primary" class="btn btn-primary btn-lg btn-block" @click="deleteOn">Delete Subject</b-button>
       <table class="table">
         <thead>
           <tr>
@@ -50,7 +51,6 @@
   </div>
 </template>
 
-
 <style>
 #background {
   background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
@@ -58,7 +58,7 @@
   background-size: cover;
   background-size: 100%;
   padding-top: 5%;
-  padding-bottom: 10%;
+  padding-bottom: 4.3%;
 }
 #add {
   width: 40%;
@@ -89,6 +89,14 @@ export default {
     };
   },
   methods: {
+    deleteOn() {
+      for(let i = 0; i < this.rows.length; i++){
+        if(this.rows[i].subject === this.del){
+          if(this.rows.splice(this.rows.indexOf(this.rows[i]), 1));
+      }
+    }
+    this.del = "";
+  },
     addOn() {
       var object = {
         subject: this.infos.subject,

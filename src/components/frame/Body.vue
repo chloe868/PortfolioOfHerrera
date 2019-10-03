@@ -1,8 +1,31 @@
-
 <template>
-    <div>
-        <transition>
-        <router-view></router-view>
-        </transition>
+    <div id="chemai">
+        <div v-if="auth.user!==null">
+            <Sidebar></Sidebar>
+            <transition>
+            <router-view></router-view>
+            </transition>
+        </div>
+        <div v-else>
+            <transition>
+            <router-view></router-view>
+            </transition>
+        </div>
     </div>
 </template>
+
+<script>
+    import Sidebar from 'components/frame/Sidebar.vue';
+    import AUTH from 'services/auth';
+    export default {
+        name: "chemai",
+        components: {
+            Sidebar
+        },
+        data(){
+            return {
+                auth: AUTH
+            }
+        }
+    }
+</script>
