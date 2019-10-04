@@ -25,7 +25,11 @@
         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span></div>
         <input type="text" class="form-control" placeholder="Room" name="room" v-model="infos.room" required/>
       </div>
-        <b-button variant="primary" class="btn btn-primary btn-lg btn-block" @click="addOn">Add Subject</b-button>
+        <b-button variant="primary" class="btn btn-primary btn-lg btn-block" @click="addOn">Add Subject</b-button><br>
+      <div class="input-group form-group">
+        <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-trash"></i></span></div>
+        <input type="text" class="form-control" placeholder="Delete Subject" name="delete" v-model="del" required/>
+      </div>
         <b-button variant="primary" class="btn btn-primary btn-lg btn-block" @click="deleteOn">Delete Subject</b-button>
       <table class="table">
         <thead>
@@ -57,8 +61,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-size: 100%;
-  padding-top: 5%;
-  padding-bottom: 4.3%;
+  padding-top: 1.5%;
+  padding-bottom: 3.5%;
 }
 #add {
   width: 40%;

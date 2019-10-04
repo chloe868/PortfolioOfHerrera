@@ -5,7 +5,7 @@
       <h1>Dashboard</h1>
       <hr>
       </center>
-      <div id="card">
+      <div>
           <center>
             <b-card-img id="image" :src="require('assets/user.png')" class="rounded-0"></b-card-img>
                 <h1>Hi {{firstname}}!</h1>
@@ -16,10 +16,6 @@
   </div>
 </template>
 <style scoped>
-#card {
-  margin-top: 30px;
-  margin-left: 20px;
-}
 #image {
   width: 250px;
   height: 220px;
@@ -30,7 +26,7 @@
   background-size: cover;
   background-size: 100%;
   padding-top: 10%;
-  padding-bottom: 6%;
+  padding-bottom: 7%;
 }
 #dash {
   width: 30%;

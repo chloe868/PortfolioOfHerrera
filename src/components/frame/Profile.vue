@@ -29,7 +29,7 @@
   background-size: cover;
   background-size: 100%;
   padding-top: 5%;
-  padding-bottom: 6%;
+  padding-bottom: 6.3%;
 }
 #prof {
   width: 30%;
