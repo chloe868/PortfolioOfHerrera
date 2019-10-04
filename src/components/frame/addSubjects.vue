@@ -28,7 +28,7 @@
         <b-button variant="primary" class="btn btn-primary btn-lg btn-block" @click="addOn">Add Subject</b-button><br>
       <div class="input-group form-group">
         <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-trash"></i></span></div>
-        <input type="text" class="form-control" placeholder="Delete Subject" name="delete" v-model="del" required/>
+        <input type="text" class="form-control" placeholder="Delete Subject" name="delete" v-model="infos.del" required/>
       </div>
         <b-button variant="primary" class="btn btn-primary btn-lg btn-block" @click="deleteOn">Delete Subject</b-button>
       <table class="table">
@@ -88,18 +88,19 @@ export default {
         teacher: "",
         time: "",
         day: "",
-        room: ""
+        room: "",
+        del: ""
       }
     };
   },
   methods: {
     deleteOn() {
       for(let i = 0; i < this.rows.length; i++){
-        if(this.rows[i].subject === this.del){
+        if(this.rows[i].subject === this.infos.del){
           if(this.rows.splice(this.rows.indexOf(this.rows[i]), 1));
       }
     }
-    this.del = "";
+    this.infos.del = "";
   },
     addOn() {
       var object = {

@@ -20,7 +20,7 @@
             </div>
             <div class="input-group form-group">
               <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-envelope"></i></span></div>
-              <input type="text" class="form-control" placeholder="Username" name="username" v-model="username" required/>
+              <input type="email" class="form-control" placeholder="Username" name="username" v-model="username" required/>
             </div>
             <div class="input-group form-group">
               <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-key"></i></span></div>
