@@ -2,20 +2,20 @@
   <div id="app">
     <Header></Header>
     <AppBody></AppBody>
-    <Sidebar v-show ="$route.path === '/dashboard' || $route.path === '/add' || $route.path === '/UpdateProf' || $route.path === '/Profile'"></Sidebar>
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
 import Header from "components/frame/Header.vue";
 import AppBody from "components/frame/Body.vue";
-import Sidebar from "components/frame/Sidebar.vue";
+import Footer from "components/frame/Footer.vue";
 export default {
   name: "app",
   components: {
     Header,
     AppBody,
-    Sidebar
+    Footer
   }
 };
 </script>

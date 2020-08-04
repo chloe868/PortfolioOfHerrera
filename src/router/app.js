@@ -1,50 +1,34 @@
 export default {
     routes: [{
-        path: '/Login',
-        name: 'login',
-        component: resolve => require(['modules/Login.vue'], resolve),
+        path: '/Home',
+        name: 'home',
+        component: resolve => require(['modules/aboutMe.vue'], resolve),
         meta: {
             tokenrequired: false
         }
     },
     {
-        path: '/Register',
-        name: 'register',
-        component: resolve => require(['modules/Register.vue'], resolve),
+        path: '/Resume',
+        name: 'resume',
+        component: resolve => require(['modules/resume.vue'], resolve),
         meta: {
             tokenrequired: false
         }
     },
     {
-        path: '/dashboard',
-        name: 'Dashboard',
-        component: resolve => require(['components/frame/Dashboard.vue'], resolve),
+        path: '/Projects',
+        name: 'projects',
+        component: resolve => require(['modules/projects.vue'], resolve),
         meta: {
-            tokenrequired: true
+            tokenrequired: false
         }
     },
     {
-        path: '/Profile',
-        name: 'profile',
-        component: resolve => require(['components/frame/Profile.vue'], resolve),
+        path: '/Contact',
+        name: 'contact',
+        component: resolve => require(['modules/contact.vue'], resolve),
         meta: {
-            tokenrequired: true
-        }
-    },
-    {
-        path: '/UpdateProf',
-        name: 'Updateprofile',
-        component: resolve => require(['components/frame/UpdateProf.vue'], resolve),
-        meta: {
-            tokenrequired: true
-        }
-    },
-    {
-        path: '/add',
-        name: 'AddSubjects&Course',
-        component: resolve => require(['components/frame/addSubjects.vue'], resolve),
-        meta: {
-            tokenrequired: true
+            tokenrequired: false
         }
     }
 ]
