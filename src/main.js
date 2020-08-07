@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import VueTypedJs from 'vue-typed-js'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -9,6 +10,7 @@ import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 Vue.use(VueSidebarMenu)
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
+Vue.use(VueTypedJs)
 new Vue({
   render: h => h(App),
   router: router,
