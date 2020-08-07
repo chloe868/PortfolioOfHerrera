@@ -38,12 +38,7 @@
 </template>
 <style scoped>
 #background {
-  background-image: url("https://www.itseducation.asia/assets/images/bg-1005.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-size: 100%;
-  padding-top: 0.5%;
-  padding-bottom: 15%;
+  background-color: rgb(198, 241, 200);
 }
 #divFrom {
   width: 30%;
