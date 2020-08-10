@@ -1,80 +1,136 @@
 <template>
-  <div id="background">
-    <div id="divFrom">
-      <center>
-        <h1>Register</h1>
-      </center>
-          <form @submit="onsubmit">
-            <div class="input-group form-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-user"></i></span>
-              </div>
-              <input type="text" class="form-control" placeholder="firstname" name="firstname" v-model="input.firstname" required/>
-            </div>
-            <div class="input-group form-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-user"></i></span>
-              </div>
-              <input type="text" class="form-control" placeholder="lastname" name="lastname" v-model="input.lastname" required/>
-            </div>
-            <div class="input-group form-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-              </div>
-              <input type="email" class="form-control" placeholder="username" name="username" v-model="input.username" required/>
-            </div>
-            <div class="input-group form-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text"><i class="fas fa-key"></i></span>
-              </div>
-              <input type="password" class="form-control" name="password" placeholder="password" v-model="input.password" required/>
-            </div>
-            <div class="form-group">
-              <button id="btnSubmit" type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
-            </div>
-          </form>
+  <div>
+    <div class="split background">
+      <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
+        <div class="hovereffect">
+          <img class="img-responsive" src="../assets/abang.png" alt="">
+          <div class="overlay">
+            <h2>Hover effect 1</h2>
+            <a class="info" href="#">link here</a>
+          </div>
+        </div>
       </div>
+    </div>
   </div>
 </template>
 <style scoped>
-#background {
-  background-color: rgb(198, 241, 200);
+.img-responsive{
+  margin-top: 25%;
+  width:100%;
+  height: 200px;
 }
-#divFrom {
-  width: 30%;
-  position: relative;
-  left: 35%;
-  margin-top: 10%;
-  background-color: rgb(200, 207, 204);
-  border-radius: 5%;
-  padding: 2%;
+.split {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+.background {
+  background-image: linear-gradient(to top, #000000 10%, #ffffff 107%);;
+}
+.hovereffect {
+  width:100%;
+  height:100%;
+  float:left;
+  overflow:hidden;
+  position:relative;
+  text-align:center;
+  cursor:default;
+  margin-left: 30%;
+}
+
+.hovereffect .overlay {
+  margin-top: 20%;
+  width:100%;
+  height:100%;
+  position:absolute;
+  overflow:hidden;
+  top:0;
+  left:0;
+  opacity:0;
+  background-color:rgba(0,0,0,0.5);
+  -webkit-transition:all .4s ease-in-out;
+  transition:all .4s ease-in-out
+}
+
+  .hovereffect img {
+  display:block;
+  position:relative;
+  -webkit-transition:all .4s linear;
+  transition:all .4s linear;
+}
+
+.hovereffect h2 {
+text-transform:uppercase;
+color:#fff;
+text-align:center;
+position:relative;
+font-size:17px;
+background:rgba(0,0,0,0.6);
+-webkit-transform:translatey(-100px);
+-ms-transform:translatey(-100px);
+transform:translatey(-100px);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+padding:10px;
+}
+
+.hovereffect a.info {
+text-decoration:none;
+display:inline-block;
+text-transform:uppercase;
+color:#fff;
+border:1px solid #fff;
+background-color:transparent;
+opacity:0;
+filter:alpha(opacity=0);
+-webkit-transition:all .2s ease-in-out;
+transition:all .2s ease-in-out;
+margin:50px 0 0;
+padding:7px 14px;
+}
+
+.hovereffect a.info:hover {
+box-shadow:0 0 5px #fff;
+}
+
+.hovereffect:hover img {
+-ms-transform:scale(1.2);
+-webkit-transform:scale(1.2);
+transform:scale(1.2);
+}
+
+.hovereffect:hover .overlay {
+opacity:1;
+filter:alpha(opacity=100);
+}
+
+.hovereffect:hover h2,.hovereffect:hover a.info {
+opacity:1;
+filter:alpha(opacity=100);
+-ms-transform:translatey(0);
+-webkit-transform:translatey(0);
+transform:translatey(0);
+}
+
+.hovereffect:hover a.info {
+-webkit-transition-delay:.2s;
+transition-delay:.2s;
 }
 </style>
 <script>
-import AUTH from 'services/auth'
 export default {
-    name: 'register',
-    auth:AUTH,
+    name: 'Projects', 
     data() {
         return {
-            input: {
-                firstname: "",
-                lastname: "",
-                username: "",
-                password: ""
-            }
+
         }
     },
     methods: {
-        onsubmit(e) {
-            e.preventDefault();
-            sessionStorage.setItem("firstname", this.input.firstname)
-            sessionStorage.setItem("lastname", this.input.lastname)
-            sessionStorage.setItem("username", this.input.username)
-            sessionStorage.setItem("password", this.input.password)
-            AUTH.register(this.input.username, this.input.password)
-        }
-    }
-}
+    }   
+};
 </script>
+
 

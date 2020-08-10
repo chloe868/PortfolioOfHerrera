@@ -22,9 +22,7 @@
     </div>
   </div>
 </template>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-/* Split the screen in half */
 .split {
   height: 100%;
   width: 100%;
@@ -35,12 +33,10 @@
   padding-top: 20px;
 }
 
-/* Control the left side */
 .background {
   background-image: linear-gradient(to top, #000000 10%, #ffffff 107%);;
 }
 
-/* If you want the content centered horizontally and vertically */
 .image {
   position: absolute;
   top: 50%;
@@ -50,7 +46,6 @@
   text-align: center;
 }
 
-/* Style the image inside the centered container, if needed */
 .image img {
   width: 250px;
   border-radius: 50%;
@@ -60,7 +55,7 @@
   color: white;
   float: right;
   margin-right: 10%;
-  margin-top: 20%;
+  margin-top: 13%;
 }
 hr {
   height: 1px;
