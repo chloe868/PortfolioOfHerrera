@@ -21,7 +21,7 @@
   overflow-x: hidden;
 }
 .background {
-  background-image: linear-gradient(to top, #000000 10%, #ffffff 107%);;
+  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);;
 }
 .image {
   top: 8%;

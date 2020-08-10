@@ -1,24 +1,65 @@
 <template>
   <div>
     <div class="split background">
-      <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12">
-        <div class="hovereffect">
-          <img class="img-responsive" src="../assets/abang.png" alt="">
-          <div class="overlay">
-            <h2>Hover effect 1</h2>
-            <a class="info" href="#">link here</a>
+      <div class="container py-3">
+      <div class="title h1 text-center">Abang</div>
+      <!-- Card Start -->
+      <div class="card">
+        <div class="row ">
+          <div class="col-md-7 px-3">
+            <div class="card-block px-6">
+              <h4 class="card-title">Abang</h4>
+              <p class="card-text">
+                The Carousel code can be replaced with an img src, no problem. The added CSS brings shadow to the card and some adjustments to the prev/next buttons and the indicators is rounded now. As in Bootstrap 3
+              </p>
+              <p class="card-text">Made for usage, commonly searched for. Fork, like and use it. Just move the carousel div above the col containing the text for left alignment of images</p>
+              <br>
+              <a href="#" class="mt-auto btn btn-primary  ">Read More</a>
+            </div>
           </div>
+          <!-- Carousel start -->
+          <div class="col-md-5">
+            <div id="CarouselTest" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#CarouselTest" data-slide-to="0" class="active"></li>
+                <li data-target="#CarouselTest" data-slide-to="1"></li>
+                <li data-target="#CarouselTest" data-slide-to="2"></li>
+
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block" src="../assets/che.png" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block" src="../assets/abang.png" alt="">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block" src="../assets/che.png" alt="">
+                </div>
+                <a class="carousel-control-prev" href="#CarouselTest" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+                <a class="carousel-control-next" href="#CarouselTest" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+              </div>
+            </div>
+          </div>
+          <!-- End of carousel -->
         </div>
       </div>
+      <!-- End of card -->
+
+    </div>
+    <br>
+    <br>
+    
     </div>
   </div>
 </template>
 <style scoped>
-.img-responsive{
-  margin-top: 25%;
-  width:100%;
-  height: 200px;
-}
 .split {
   height: 100%;
   width: 100%;
@@ -28,96 +69,64 @@
   overflow-x: hidden;
 }
 .background {
-  background-image: linear-gradient(to top, #000000 10%, #ffffff 107%);;
+  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);;
 }
-.hovereffect {
-  width:100%;
-  height:100%;
-  float:left;
-  overflow:hidden;
-  position:relative;
-  text-align:center;
-  cursor:default;
-  margin-left: 30%;
+body {
+  background-color:  #eee;
+}
+.title {
+ 
+    margin-bottom: 50px;
+    text-transform: uppercase;
 }
 
-.hovereffect .overlay {
-  margin-top: 20%;
-  width:100%;
-  height:100%;
-  position:absolute;
-  overflow:hidden;
-  top:0;
-  left:0;
-  opacity:0;
-  background-color:rgba(0,0,0,0.5);
-  -webkit-transition:all .4s ease-in-out;
-  transition:all .4s ease-in-out
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 0;
+    padding: 1em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+     
+}
+.card {
+    font-size: 1em;
+    overflow: hidden;
+    padding: 5;
+    border: none;
+    border-radius: .28571429rem;
+    box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+    margin-top:20px;
 }
 
-  .hovereffect img {
-  display:block;
-  position:relative;
-  -webkit-transition:all .4s linear;
-  transition:all .4s linear;
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+.carousel-indicators .active {
+    background-color: white;
+    max-width: 12px;
+    margin: 0 3px;
+    height: 12px;
+}
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
 
-.hovereffect h2 {
-text-transform:uppercase;
-color:#fff;
-text-align:center;
-position:relative;
-font-size:17px;
-background:rgba(0,0,0,0.6);
--webkit-transform:translatey(-100px);
--ms-transform:translatey(-100px);
-transform:translatey(-100px);
--webkit-transition:all .2s ease-in-out;
-transition:all .2s ease-in-out;
-padding:10px;
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
-
-.hovereffect a.info {
-text-decoration:none;
-display:inline-block;
-text-transform:uppercase;
-color:#fff;
-border:1px solid #fff;
-background-color:transparent;
-opacity:0;
-filter:alpha(opacity=0);
--webkit-transition:all .2s ease-in-out;
-transition:all .2s ease-in-out;
-margin:50px 0 0;
-padding:7px 14px;
-}
-
-.hovereffect a.info:hover {
-box-shadow:0 0 5px #fff;
-}
-
-.hovereffect:hover img {
--ms-transform:scale(1.2);
--webkit-transform:scale(1.2);
-transform:scale(1.2);
-}
-
-.hovereffect:hover .overlay {
-opacity:1;
-filter:alpha(opacity=100);
-}
-
-.hovereffect:hover h2,.hovereffect:hover a.info {
-opacity:1;
-filter:alpha(opacity=100);
--ms-transform:translatey(0);
--webkit-transform:translatey(0);
-transform:translatey(0);
-}
-
-.hovereffect:hover a.info {
--webkit-transition-delay:.2s;
-transition-delay:.2s;
+.btn {
+  margin-top: auto;
 }
 </style>
 <script>

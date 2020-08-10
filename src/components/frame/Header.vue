@@ -15,14 +15,13 @@
 </template>
 
 <style scoped lang="scss">
+
 </style>
 <script>
 import ROUTER from 'router';
-import AUTH from 'services/auth';
 export default {
     data(){
       return{
-        auth: AUTH
       }
     },
     methods: {
