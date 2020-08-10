@@ -6,11 +6,9 @@
             <img src="../assets/Resume.png">
             </center>
         </div>
-        
     </div>
   </div>
 </template>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .split {
   height: 100%;
@@ -27,7 +25,6 @@
   top: 8%;
   position: absolute;
   width: 100%;
-
 }
 img {
   width: 60%;
