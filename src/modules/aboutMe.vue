@@ -1,5 +1,4 @@
 <template>
- <div class="background split">
     <div class="container">
       <div class="row">
           <div class="col-md-6">
@@ -18,10 +17,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="facts">
+          <div class="facts col-md-6 cardlist">
               <h1>About Me</h1>
-              <div class="cardlist">
                 <div class="card" style="width: 30rem;">
                     <div class="card-body">
                       <h1 class="card-title">Speechless</h1>
@@ -39,11 +36,8 @@
                     <h1 class="card-title">Words</h1>
                   </div>
                 </div>
-              </div>
-            </div>
           </div>
       </div>
-    </div>
   </div>
 </template>
 <style scoped>
@@ -51,26 +45,19 @@
   .col-md-6 {
     width: 100%;
     height: 100%;
-    margin-top: 25%;
+    margin-top: -25%;
     margin-bottom: -5%;
   }
 }
 .container {
-  margin-top: 15%;
+  margin-top: 30vh;
 }
 .facts {
-  margin-top:-20%;
+  margin-top:-10%;
   text-align: center;
 }
 .cardlist {
-  padding: 5px;
-}
-.split {
-  height: 100%;
-  width: 100%;
-}
-.background {
-  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);
+  padding: 55px;
 }
 .firstCol{
   margin-top: -30%;

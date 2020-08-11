@@ -1,14 +1,26 @@
 <template>
-  <div>
-    <div>
+  <div class="background">
       <Header></Header>
       <AppBody></AppBody>
-    </div>
-    <div>
       <Footer></Footer>
-    </div>
   </div>
 </template>
+<style>
+.background {
+  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 700px) {
+  .background {
+    width: 100%;
+    height: 100%;
+  }
+}
+</style>
+
 
 <script>
 import Header from "components/frame/Header.vue";
@@ -18,8 +30,8 @@ export default {
   name: "app",
   components: {
     Header,
-    AppBody,
-    Footer
+    Footer,
+    AppBody
   }
 };
 </script>

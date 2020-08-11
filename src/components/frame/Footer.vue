@@ -6,10 +6,10 @@
         <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
       </a>
       <a class="li-ic">
-        <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+        <a href="https://www.linkedin.com/in/cherrymae-herrera-b1a5b3195/"><i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i></a>
       </a>
-      <a class="fb-ic">
-        <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+      <a class="fb-ic">      
+        <a href="https://github.com/chloe868"><i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i></a>
       </a>
     </div>
   </div>
@@ -17,8 +17,6 @@
 </template>
 <style>
 .footer {
-  left: 0;
-  right: 0;
   height: 50px;
   position: fixed;
   bottom: 0px;
@@ -26,7 +24,7 @@
   background-color: black !important;
   color: white;
   text-align: right;
-  z-index: 1 !important;
+  /* z-index: 1 !important; */
 }
 /* .fa-facebook-f {
   padding: 1%;

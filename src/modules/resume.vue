@@ -1,32 +1,38 @@
 <template>
-  <div>
-    <div class="split">
-      <div class="image background">
-        <button class="btn btn-primary" @click="downloadFile">Download</button>
-        <center>
-          <img src="../assets/Resume.png">
-          </center>
-      </div>
-    </div>
+  <div class="image split background">
+    <button class="btn btn-primary" @click="downloadFile">Download</button>
+      <center>
+        <img src="../assets/Resume.png">
+      </center>
   </div>
 </template>
 <style scoped>
 .split {
   height: 100%;
   width: 100%;
-  z-index: 1;
-  top: 0;
 }
 .background {
-  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);
+  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);;
+}
+@media screen and (max-width: 700px) {
+  .background {
+    width: 100%;
+    height: 100%;
+  }
+  img {
+    height: 600px;
+    width: 1500px;
+  }
 }
 .image {
-  top: 8%;
-  position: absolute;
-  width: 100%;
+  top: 10%;
 }
 img {
   width: 60%;
+}
+.btn-primary {
+    color: #fff;
+    margin-top: 1%;
 }
 </style>
 <script>

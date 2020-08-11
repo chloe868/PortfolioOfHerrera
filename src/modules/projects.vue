@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div class="split background">
       <div class="container py-3">
       <div class="title h1 text-center">Projects</div>
       <!-- Card Start -->
@@ -50,8 +49,6 @@
         </div>
       </div>
       <!-- End of card -->
-
-    </div>
     <br>
     <br>
     
@@ -59,25 +56,10 @@
   </div>
 </template>
 <style scoped>
-.split {
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-}
-.background {
-  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);;
-}
-body {
-  background-color:  #eee;
-}
 .title {
- 
     margin-bottom: 50px;
     text-transform: uppercase;
 }
-
 .card-block {
     font-size: 1em;
     position: relative;
