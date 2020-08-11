@@ -1,5 +1,5 @@
 <template>
-  <div id="Header">
+  <div class="header">
     <b-navbar fixed="top" toggleable="lg" type="dark" variant="dark">
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
@@ -15,7 +15,12 @@
 </template>
 
 <style scoped lang="scss">
-
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+}
 </style>
 <script>
 import ROUTER from 'router';

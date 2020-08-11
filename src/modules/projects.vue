@@ -2,7 +2,7 @@
   <div>
     <div class="split background">
       <div class="container py-3">
-      <div class="title h1 text-center">Abang</div>
+      <div class="title h1 text-center">Projects</div>
       <!-- Card Start -->
       <div class="card">
         <div class="row ">
@@ -10,11 +10,10 @@
             <div class="card-block px-6">
               <h4 class="card-title">Abang</h4>
               <p class="card-text">
-                The Carousel code can be replaced with an img src, no problem. The added CSS brings shadow to the card and some adjustments to the prev/next buttons and the indicators is rounded now. As in Bootstrap 3
+                Abang is a web development
               </p>
-              <p class="card-text">Made for usage, commonly searched for. Fork, like and use it. Just move the carousel div above the col containing the text for left alignment of images</p>
+              <p class="card-text">Another description</p>
               <br>
-              <a href="#" class="mt-auto btn btn-primary  ">Read More</a>
             </div>
           </div>
           <!-- Carousel start -->
@@ -63,7 +62,6 @@
 .split {
   height: 100%;
   width: 100%;
-  position: fixed;
   z-index: 1;
   top: 0;
   overflow-x: hidden;

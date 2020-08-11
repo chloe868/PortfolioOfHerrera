@@ -17,13 +17,16 @@
 </template>
 <style>
 .footer {
-   position: fixed;
-   bottom: 0px;
-   width: 100%;
-   background-color: black !important;
-   color: white;
-   text-align: right;
-   z-index: 1 !important;
+  left: 0;
+  right: 0;
+  height: 50px;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background-color: black !important;
+  color: white;
+  text-align: right;
+  z-index: 1 !important;
 }
 /* .fa-facebook-f {
   padding: 1%;

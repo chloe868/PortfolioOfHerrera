@@ -1,11 +1,12 @@
 <template>
   <div>
-    <div class="split background">
-        <div class="image">
-          <center>
-            <img src="../assets/Resume.png">
-            </center>
-        </div>
+    <div class="split">
+      <div class="image background">
+        <button class="btn btn-primary" @click="downloadFile">Download</button>
+        <center>
+          <img src="../assets/Resume.png">
+          </center>
+      </div>
     </div>
   </div>
 </template>
@@ -13,13 +14,11 @@
 .split {
   height: 100%;
   width: 100%;
-  position: fixed;
   z-index: 1;
   top: 0;
-  overflow-x: hidden;
 }
 .background {
-  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);;
+  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);
 }
 .image {
   top: 8%;
@@ -31,15 +30,30 @@ img {
 }
 </style>
 <script>
+import axios from "axios";
 export default {
     name: 'Resume', 
     data() {
         return {
-
+          fileUrl: require('../assets/Resume.png')
         }
     },
     methods: {
-    }   
+      downloadFile(){
+        axios({
+          url: this.fileUrl,
+          method: 'GET',
+          responseType: 'blob',
+        }).then((response) => {
+          var fileURL = window.URL.createObjectURL(new Blob([response.data]));
+          var fileLink = document.createElement('a');
+          fileLink.href = fileURL;
+          fileLink.setAttribute('download', 'resume.png');
+          document.body.appendChild(fileLink);
+          fileLink.click();
+        });
+      } 
+  }  
 };
 </script>
 
