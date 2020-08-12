@@ -1,38 +1,36 @@
 <template>
-  <div class="image split background">
-    <button class="btn btn-primary" @click="downloadFile">Download</button>
-      <center>
-        <img src="../assets/Resume.png">
-      </center>
+  <div>
+    <div class="split">
+      <div class="image background">
+        <center>
+          <img src="../assets/Resume.png">
+          <button class="btn btn-primary" @click="downloadFile"><i class="fa fa-download"></i> Download</button>
+        </center>
+      </div>
+    </div>
   </div>
 </template>
 <style scoped>
+button {
+  width: 56.5%;
+  margin-bottom: 50px;
+}
 .split {
   height: 100%;
   width: 100%;
+  z-index: 1;
+  top: 0;
 }
 .background {
-  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);;
-}
-@media screen and (max-width: 700px) {
-  .background {
-    width: 100%;
-    height: 100%;
-  }
-  img {
-    height: 600px;
-    width: 1500px;
-  }
+  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);
 }
 .image {
-  top: 10%;
+  top: 8%;
+  position: absolute;
+  width: 100%;
 }
 img {
   width: 60%;
-}
-.btn-primary {
-    color: #fff;
-    margin-top: 1%;
 }
 </style>
 <script>
@@ -41,7 +39,7 @@ export default {
     name: 'Resume', 
     data() {
         return {
-          fileUrl: require('../assets/Resume.png')
+          fileUrl: require('../assets/Resume.png') 
         }
     },
     methods: {
