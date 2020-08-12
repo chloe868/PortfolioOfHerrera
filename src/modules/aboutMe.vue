@@ -53,7 +53,7 @@
   margin-top: 30vh;
 }
 .facts {
-  margin-top:-10%;
+  margin-top:-15%;
   text-align: center;
 }
 .cardlist {
@@ -87,6 +87,14 @@ h1 {
 }
 h4 {
   font-style: italic;
+}
+.card {
+  background-image: linear-gradient(to top, #0000005d 250%, #ffffffc9 70%);
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+  height: 20%;
+  width: 100%;
 }
 </style>
 <script>
