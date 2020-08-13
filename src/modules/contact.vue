@@ -8,28 +8,30 @@
           mr-4
           ml-4
         >I'd love to hear something from you</mdb-card-text>
-        <form class="needs-validation" novalidate @submit.prevent="submitForm">
+        <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+          action="https://script.google.com/a/student.passerellesnumeriques.org/macros/s/AKfycbzHkfPJPZ0gKUfA1A9349i4fqykzL1Y5kg2cIQc/exec">
           <mdb-row>
             <mdb-col md="8">
               <mdb-row>
-                <mdb-col>
-                  <mdb-input label="Material input" v-model="value" />
+                <mdb-col for="name">
+                  <mdb-input id="name" name="name" label="Name" />
                 </mdb-col>
-                <mdb-col>
-                  <mdb-input type="email" label="Your email" v-model="fields.email" required />
+                <mdb-col for="email">
+                  <mdb-input id="email" name="email" type="email" label="Your email" required />
                 </mdb-col>
               </mdb-row>
-              <mdb-row>
+              <!-- <mdb-row>
                 <mdb-col>
                   <mdb-input label="Subject" v-model="fields.subject" required />
                 </mdb-col>
-              </mdb-row>
+              </mdb-row> -->
               <mdb-row>
-                <mdb-col>
+                <mdb-col for="message">
                   <mdb-input
+                    id="message" 
+                    name="message"
                     type="textarea"
                     label="Your message"
-                    v-model="fields.message"
                     required
                   />
                 </mdb-col>
@@ -56,7 +58,11 @@
               </mdb-row>
             </mdb-col>
           </mdb-row>
-          <mdb-btn color="primary" type="submit" class="float-left">Send</mdb-btn>
+          <mdb-btn color="primary" class="float-left" @click="formSubmit">Send</mdb-btn>
+          <div class="thankyou_message" style="display:none;">
+            <h2><em>Thanks</em> for contacting us!
+              We will get back to you soon!</h2>
+          </div>
         </form>
       </mdb-card-body>
     </mdb-card>
@@ -68,6 +74,8 @@
   }
 </style>
 <script>
+import formSubmit from './form-submission-handler.js'
+import ROUTER from "router";
   import {
     mdbContainer,
     mdbInput,
@@ -99,18 +107,14 @@
     },
     data() {
       return {
-        fields: {
-          name: "",
-          email: "",
-          subject: "",
-          message: ""
-        }
       };
     },
     methods: {
-      submitForm(event) {
-        event.target.classList.add("was-validated");
-        // submit form
+      formSubmit,
+      sendEmail(){
+        console.log('nasulod')
+        // formSubmit
+        // ROUTER.push('/Contact');
       }
     }
   };
