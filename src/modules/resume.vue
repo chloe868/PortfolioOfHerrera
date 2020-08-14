@@ -4,7 +4,8 @@
       <div class="image background">
         <center>
           <img src="../assets/Resume.png">
-          <button class="btn btn-primary" @click="downloadFile"><i class="fa fa-download"></i> Download</button>
+          <br>
+          <button class="btn btn-outline-info" @click="downloadFile"><i class="fa fa-download"></i> Download</button>
         </center>
       </div>
     </div>
@@ -12,7 +13,7 @@
 </template>
 <style scoped>
 button {
-  width: 56.5%;
+  width: 20%;
   margin-bottom: 50px;
 }
 .split {

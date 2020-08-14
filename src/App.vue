@@ -12,7 +12,7 @@
 }
 @media screen and (max-width: 100%) {
   .background {
-    width: 100vh;
+    width: 100vw;
     height: 100vh;
   }
 }

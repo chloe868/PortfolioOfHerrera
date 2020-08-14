@@ -16,19 +16,19 @@
       </div>
       <div class="facts col-md-6 cardlist">
         <h1><b>About Me</b></h1>
-          <div class="card" style="width: 30rem;">
+          <div class="card">
             <div class="card-body">
-              <h1 class="card-title">Speechless</h1>
+              <h1 class="card-title">Back-end Developer</h1>
             </div>
           </div>
           <br>
-          <div class="card text-center" style="width: 30rem;">
+          <div class="card text-center">
             <div class="card-body">
               <h1 class="card-title">Nothing to say</h1>
             </div>
           </div>
           <br>
-          <div class="card text-center" style="width: 30rem;">
+          <div class="card text-center">
             <div class="card-body">
               <h1 class="card-title">Words</h1>
             </div>
@@ -40,11 +40,15 @@
 <style scoped>
 @media screen and (max-width: 800px) {
   .col-md-6 {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    margin-top: -25%;
+    margin-top: 0%;
     margin-bottom: -5%;
   }
+  .facts {
+  margin-top:-30%;
+  text-align: center;
+}
 }
 .container {
   margin-top: 27vh;
