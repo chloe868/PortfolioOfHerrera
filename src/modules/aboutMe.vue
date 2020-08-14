@@ -38,7 +38,7 @@
   </div>
 </template>
 <style scoped>
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   .col-md-6 {
     width: 100%;
     height: 100%;

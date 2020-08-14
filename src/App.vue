@@ -13,7 +13,7 @@
   width: 100%;
   position: relative;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 100%) {
   .background {
     width: 100%;
     height: 100%;
