@@ -6,10 +6,9 @@
       <div class="card-body">
         <h5 class="card-title">Abang</h5>
         <p class="card-text">Abang is a web application which helps tourists both local and foreign to rent a specific things. 
-          Things just like car, van, bicycle, motorcycle, or anything that they want to rent. 
-          This application is a great help not only for tourists, but also for company rentals who are unknown because they 
-          don't have a website to promote their products and services. Through this web application, it helps tourists(local and foreign)
-          to have convenience and </p>
+          Things just like car, van, bicycle, motorcycle, or anything that they want to rent to any company rentals. 
+          The language that was being used in this web application are the following: Node.js and Vue.js as our frontend and MongoDB as our backend.
+        </p>
       </div>
     </div>
   </div>
@@ -19,7 +18,9 @@
       <img class="card-img-top" src="../assets/pn.png" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title">Parent's Counterpart Management System</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">Parent's Counterpart Management System is a system which bridges PN students and Admin Staff. 
+          This application makes the monthly fee of every students be easily traced and be followed-up every month. 
+          Through this system as well, it helps the admin not to </p>
       </div>
     </div>
   </div>
