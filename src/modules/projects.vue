@@ -9,8 +9,7 @@
           Things just like car, van, bicycle, motorcycle, or anything that they want to rent. 
           This application is a great help not only for tourists, but also for company rentals who are unknown because they 
           don't have a website to promote their products and services. Through this web application, it helps tourists(local and foreign)
-          to find easily an appropriate </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+          to have convenience and </p>
       </div>
     </div>
   </div>
@@ -19,9 +18,8 @@
     <div class="card">
       <img class="card-img-top" src="../assets/pn.png" alt="Card image cap">
       <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
+        <h5 class="card-title">Parent's Counterpart Management System</h5>
         <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
   </div>
@@ -31,7 +29,7 @@
 @media screen and (max-width: 700px) {
   .col-md-6 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin-top: -25%;
     margin-bottom: -5%;
   }

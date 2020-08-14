@@ -35,19 +35,19 @@
               <mdb-row>
                 <mdb-col class="mt-4">
                   <mdb-icon icon="map-marker-alt" size="2x" />
-                  <p>San Francisco, CA 94126, USA</p>
+                  <p>San Alberto Formation Center, Nasipit Talamban, Cebu</p>
                 </mdb-col>
               </mdb-row>
               <mdb-row>
                 <mdb-col class="mt-4">
                   <mdb-icon icon="phone" size="2x" />
-                  <p>+ 01 234 567 89</p>
+                  <p>+63 926 975 3710</p>
                 </mdb-col>
               </mdb-row>
               <mdb-row>
                 <mdb-col class="mt-4">
                   <mdb-icon icon="envelope" size="2x" />
-                  <p>contact@mdbootstrap.com</p>
+                  <p>cherrymae.herrera@student.passerellesnumeriques.org</p>
                 </mdb-col>
               </mdb-row>
             </mdb-col>
@@ -61,6 +61,7 @@
 <style scoped>
   .container {
     text-align: center;
+    height: 100%;
   }
 </style>
 <script>

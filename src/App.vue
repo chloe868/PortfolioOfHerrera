@@ -8,10 +8,8 @@
 <style>
 .background {
   background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);
-  min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   width: 100%;
-  position: relative;
 }
 @media screen and (max-width: 100%) {
   .background {
@@ -20,8 +18,6 @@
   }
 }
 </style>
-
-
 <script>
 import Header from "components/frame/Header.vue";
 import AppBody from "components/frame/Body.vue";

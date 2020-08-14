@@ -24,16 +24,5 @@
   background-color: black !important;
   color: white;
   text-align: right;
-  /* z-index: 1 !important; */
 }
-/* .fa-facebook-f {
-  padding: 1%;
-  border-radius: 50%;
-  background-color: #3b5998;
-}
-.fa-linkedin-in {
-  padding: 1%;
-  border-radius: 50%;
-  background-color: #2867B2;
-} */
 </style>

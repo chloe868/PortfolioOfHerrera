@@ -41,13 +41,15 @@
 @media screen and (max-width: 800px) {
   .col-md-6 {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin-top: -25%;
     margin-bottom: -5%;
   }
 }
 .container {
-  margin-top: 30vh;
+  margin-top: 27vh;
+  height: 100%;
+  width: 100%;
 }
 .facts {
   margin-top:-15%;
