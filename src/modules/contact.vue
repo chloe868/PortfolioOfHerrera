@@ -11,7 +11,7 @@
         <form class="gform pure-form pure-form-stacked contact-form" @submit.prevent="sendEmail">
           <mdb-row>
             <mdb-col md="8">
-              <mdb-row>
+              <mdb-row class="marginForm">
                 <mdb-col for="name">
                   <mdb-input id="name" name="from_name" label="Name" />
                 </mdb-col>
@@ -19,7 +19,7 @@
                   <mdb-input id="email" name="user_email" type="email" label="Your email" required />
                 </mdb-col>
               </mdb-row>
-              <mdb-row>
+              <mdb-row class="marginForm">
                 <mdb-col for="message">
                   <mdb-input
                     id="message" 
@@ -63,6 +63,21 @@
     text-align: center;
     height: 100%;
   }
+  @media screen and (max-width: 800px){
+    .mt-5{
+      height: 100%;
+    }
+    .card {
+      margin-top: -11%;
+    }
+    .marginForm[data-v-2a19d6cf] {
+      margin-top: 0px;
+    }
+  }
+  .marginForm {
+    margin-top: 50px;
+  }
+  
 </style>
 <script>
 import emailjs from 'emailjs-com';
@@ -75,6 +90,9 @@ export default {
     sendEmail: (e) => {
       emailjs.sendForm('default_service', 'sendemail', e.target, 'user_Uv3DtCzQH0TyeRg0kvU9M')
         .then((result) => {
+          e.target.user_email.value = ''
+          e.target.from_name.value = ''
+          e.target.message.value = ''
             console.log('SUCCESS!', result.status, result.text);
         }, (error) => {
             console.log('FAILED...', error);

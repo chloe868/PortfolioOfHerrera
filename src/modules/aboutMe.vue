@@ -24,13 +24,13 @@
           <br>
           <div class="card text-center">
             <div class="card-body">
-              <h1 class="card-title">Nothing to say</h1>
+              <h1 class="card-title">Competent Individual</h1>
             </div>
           </div>
           <br>
           <div class="card text-center">
             <div class="card-body">
-              <h1 class="card-title">Words</h1>
+              <h1 class="card-title">"Obstacles are not a hindrance to success"</h1>
             </div>
           </div>
       </div>
@@ -43,12 +43,12 @@
     width: 100vw;
     height: 100vh;
     margin-top: 0%;
-    margin-bottom: -5%;
+    margin-bottom: -25%;
   }
   .facts {
-  margin-top:-30%;
-  text-align: center;
-}
+    margin-top:-30%;
+    text-align: center;
+  }
 }
 .container {
   margin-top: 27vh;

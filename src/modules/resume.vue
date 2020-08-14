@@ -1,17 +1,29 @@
 <template>
-  <div>
-    <div class="split">
-      <div class="image background">
-        <center>
-          <img src="../assets/Resume.png">
-          <br>
-          <button class="btn btn-outline-info" @click="downloadFile"><i class="fa fa-download"></i> Download</button>
-        </center>
-      </div>
+  <div class="split">
+    <div class="image background">
+      <center>
+        <img src="../assets/Resume.png">
+        <br>
+        <button class="btn btn-outline-info" @click="downloadFile"><i class="fa fa-download"></i> Download</button>
+      </center>
     </div>
   </div>
 </template>
 <style scoped>
+@media screen and (max-width: 800px) {
+  img[data-v-5be1ad4e] {
+    width: 95%;
+  }
+  button[data-v-5be1ad4e] {
+    width: 25%;
+  }
+  .image[data-v-5be1ad4e] {
+    top: 8%;
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+  }
+}
 button {
   width: 20%;
   margin-bottom: 50px;
@@ -24,11 +36,13 @@ button {
 }
 .background {
   background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);
+  height: 100%;
 }
 .image {
   top: 8%;
   position: absolute;
   width: 100%;
+  height: 125vh;
 }
 img {
   width: 60%;
