@@ -8,7 +8,6 @@
 <style>
 .background {
   background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);
-  height: 100%;
   width: 100%;
 }
 @media screen and (max-width: 100%) {
