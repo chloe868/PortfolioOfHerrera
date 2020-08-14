@@ -1,5 +1,4 @@
 function submit() {
-  console.log('sadfkljasdfjsdaklf')
   // get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
