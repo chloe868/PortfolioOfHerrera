@@ -1,75 +1,85 @@
 <template>
-  <div class="split">
-    <div class="image background">
-      <center>
-        <img src="../assets/Resume.png">
-        <button v-if="show" class="btn btn-primary" @click="downloadFile"><i class="fa fa-download"></i> Download</button>
-      </center>
-    </div>
-  </div>
+  <mdb-container class="mt-5">
+    <mdb-card>
+      <mdb-card-title class="mt-4 h2">Contact Information</mdb-card-title>
+      <mdb-card-body>
+        <mdb-card-text
+          class="pr-5 pl-5"
+          mr-4
+          ml-4
+        >I'd love to hear something from you</mdb-card-text>
+        <form class="gform pure-form pure-form-stacked contact-form" @submit.prevent="sendEmail">
+          <mdb-row>
+            <mdb-col md="8">
+              <mdb-row>
+                <mdb-col for="name">
+                  <mdb-input id="name" name="from_name" label="Name" />
+                </mdb-col>
+                <mdb-col for="email">
+                  <mdb-input id="email" name="user_email" type="email" label="Your email" required />
+                </mdb-col>
+              </mdb-row>
+              <mdb-row>
+                <mdb-col for="message">
+                  <mdb-input
+                    id="message" 
+                    name="message"
+                    type="textarea"
+                    label="Your message"
+                    required
+                  />
+                </mdb-col>
+              </mdb-row>
+            </mdb-col>
+            <mdb-col md="4">
+              <mdb-row>
+                <mdb-col class="mt-4">
+                  <mdb-icon icon="map-marker-alt" size="2x" />
+                  <p>San Francisco, CA 94126, USA</p>
+                </mdb-col>
+              </mdb-row>
+              <mdb-row>
+                <mdb-col class="mt-4">
+                  <mdb-icon icon="phone" size="2x" />
+                  <p>+ 01 234 567 89</p>
+                </mdb-col>
+              </mdb-row>
+              <mdb-row>
+                <mdb-col class="mt-4">
+                  <mdb-icon icon="envelope" size="2x" />
+                  <p>contact@mdbootstrap.com</p>
+                </mdb-col>
+              </mdb-row>
+            </mdb-col>
+          </mdb-row>
+          <mdb-btn color="primary" class="float-left" type="submit" value="Send">Send</mdb-btn>
+        </form>
+      </mdb-card-body>
+    </mdb-card>
+  </mdb-container>
 </template>
 <style scoped>
-button {
-  width: 56.5%;
-  margin-bottom: 50px;
-}
-.split {
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  top: 0;
-}
-.background {
-  background-image: linear-gradient(to top, #000000c5 20%, #ffffff 107%);
-}
-.image {
-  top: 8%;
-  position: absolute;
-  width: 100%;
-}
-img {
-  width: 60%;
-}
+  .container {
+    text-align: center;
+  }
 </style>
 <script>
-import axios from "axios";
+import emailjs from 'emailjs-com';
+
 export default {
-    name: 'Contact', 
-    data() {
+  data() {
         return {
-          fileUrl: require('../assets/Resume.png'),
-          show: false
         }
     },
-    mounted () {
-      this.scroll()
-    },
-    methods: {
-      downloadFile(){
-        axios({
-          url: this.fileUrl,
-          method: 'GET',
-          responseType: 'blob',
-        }).then((response) => {
-          var fileURL = window.URL.createObjectURL(new Blob([response.data]));
-          var fileLink = document.createElement('a');
-          fileLink.href = fileURL;
-          fileLink.setAttribute('download', 'resume.png');
-          document.body.appendChild(fileLink);
-          fileLink.click();
-        })
-      },
-      scroll () {
-        window.onscroll = () => {
-          let bottomOfWindow = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
-          if (bottomOfWindow) {
-            this.show = true
-            console.log('klasjdflkajlskdjf')
-          }
-        }
-      }
-  }  
+  methods: {
+    sendEmail: (e) => {
+      emailjs.sendForm('default_service', 'sendemail', e.target, 'user_Uv3DtCzQH0TyeRg0kvU9M')
+        .then((result) => {
+            console.log('SUCCESS!', result.status, result.text);
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
+    }
+  }
 }
 </script>
-
-

@@ -9,7 +9,7 @@
           <h2><b>Cherry Mae B. Herrera</b></h2>&nbsp;
           <div class="qoute">
             <vue-typed-js :strings="['Great things come from<br>hard work and perseverance.<br> No excuses.<h5>~ Kobe Bryant</h5>']">
-              <h2 class="typing"></h2>
+              <h1 class="typing"></h1>
             </vue-typed-js>
           </div>
         </div>
@@ -77,7 +77,7 @@ hr {
   height: 1px;
   background-color: white;
 }
-h2 {
+h1 {
   font-style: italic;
   font-family: "Times New Roman", Times, serif;
   width: 100%;
