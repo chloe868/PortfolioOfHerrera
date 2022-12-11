@@ -12,7 +12,7 @@
     "bootstrap-vue": "^2.0.0",
     "core-js": "^2.6.5",
     "emailjs-com": "^2.6.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "jquery": "^3.5.1",
     "jspdf": "^1.5.3",
     "mdbootstrap": "^4.19.1",
